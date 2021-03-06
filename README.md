@@ -8,6 +8,10 @@ If you have any suggestions, feel free to let me know!
 
 ## Changelog
 
+#### v1.2.2;
+* Removed berry bushes, I can't work out the function to get the appropriate grow times for it to get a percentage.
+* Removed some debug code that broke barley growing
+
 #### v1.2.1;
 * Readme update
 

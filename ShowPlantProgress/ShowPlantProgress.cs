@@ -1,7 +1,5 @@
 ﻿using BepInEx;
 using HarmonyLib;
-using System;
-using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 
@@ -11,7 +9,6 @@ namespace ShowPlantProgress
     [HarmonyPatch]
     class ShowPlantProgressPlugin : BaseUnityPlugin
     {
-        private static readonly List<string> bushList = new List<string> { "RaspberryBush(Clone)", "BlueberryBush(Clone)", "CloudberryBush(Clone)" };
 
         void Awake() => Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), null);
 
@@ -25,29 +22,6 @@ namespace ShowPlantProgress
             string growPercentage = $"<color={colour}>{percentage}%</color>";
 
             return __result.Replace(" )", $", {growPercentage} )");
-        }
-
-        [HarmonyPostfix]
-        [HarmonyPatch(typeof(Pickable), "GetHoverText")]
-        public static string GameObjectHoverText_Patch(string __result, Pickable __instance)
-        {
-            if (!bushList.Contains(__instance.name)) return __result;
-
-            DateTime startTime = new DateTime(__instance.m_nview.GetZDO().GetLong("picked_time"));
-            double percentage = (ZNet.instance.GetTime() - startTime).TotalMinutes / __instance.m_respawnTimeMinutes * 100;
-            if (percentage > 99.99f) return __result;
-
-            string colour = GetColour(Math.Round(percentage, 2));
-            string growPercentage = $"<color={colour}>{percentage:0.00}%</color>";
-
-            return __result + $"{__instance.name.Replace("(Clone)", "").Replace("Bush", " Bush")} ( {growPercentage} )";
-        }
-
-        [HarmonyPostfix]
-        [HarmonyPatch(typeof(Plant), "Awake")]
-        public static void PlantBiome_Patch(Plant __instance)
-        {
-            __instance.m_biome = Heightmap.Biome.BiomesMax;
         }
 
         public static string GetColour(double percentage)
