@@ -8,6 +8,10 @@ If you have any suggestions, feel free to let me know!
 
 ## Changelog
 
+#### v1.4.0;
+* Added a coloured percentage toggle
+* Made the string replacement a little better
+
 #### v1.3.0;
 * Reimplement bushes, found a fix to the progress resetting, turns out it's an actual issue with Valheim itself. Thanks to `3d_printing_dm` from [Reddit](https://old.reddit.com/r/valheim/comments/lzcxr3/bug_in_berry_bush_pick_time_code/).
 * Added a config option to change the amount of decimal places displayed, defaults to 2.
@@ -29,3 +33,8 @@ If you have any suggestions, feel free to let me know!
 
 ![Show Off](https://fivem.fail/gta5/Network/NetworkIsTutorialSessionChangePending/tRaNsMKBm.png)
 ![Raspberry Bush](https://fivem.fail/gta5/Audio/FindRadioStationIndex/NCG4081BEb.png)
+
+[Discord Support](https://discord.gg/pTGSu8R7DW)
+
+## Affiliate Link
+<a href="https://zap-hosting.com/a/3b7ec5e8e178b1225b63fbeced07c07052e0425b"><img src="https://zap-hosting.com/interface/download/images.php?type=affiliate&id=99492" alt="ZAP-Hosting Gameserver and Webhosting"></a>
