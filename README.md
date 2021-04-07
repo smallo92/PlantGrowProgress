@@ -37,4 +37,5 @@ If you have any suggestions, feel free to let me know!
 [Discord Support](https://discord.gg/pTGSu8R7DW)
 
 ## Affiliate Link
-[![ZAP-Hosting Gameserver and Webhosting](https://zap-hosting.com/interface/download/images.php?type=affiliate&id=99496)](https://zap-hosting.com/a/f386564816225e9bcd3445ae47b34c8823f72489)
+Want a Valheim BepInEx server deployed in seconds?
+[![ZAP-Hosting Gameserver and Webhosting](https://zap-hosting.com/interface/download/images.php?type=affiliate&id=99507)](https://zap-hosting.com/smallo)
